@@ -1,0 +1,234 @@
+.header {
+  padding: 2.4rem 2rem $font-size-large 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_primary {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+  &_back {
+    color: $color-icons-dark;
+    font-size: 2rem;
+  }
+}
+.chevron {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  &_back {
+    height: 0.1rem;
+    width: $font-size-small;
+    background-color: $color-icons-dark;
+    transform: rotate(-55deg);
+  }
+  &_back1 {
+    transform: rotate(55deg);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.chevron1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  &_back {
+    height: 0.1rem;
+    width: $font-size-small;
+    background-color: $color-icons-dark;
+    transform: rotate(-55deg);
+  }
+  &_back1 {
+    transform: rotate(55deg);
+  }
+}
+.assign {
+  display: flex;
+  gap: $font-size-large;
+  font-size: $font-size-small;
+  padding: $font-size-frequent 0;
+  border-bottom: 1px solid $color-black;
+  padding: 1rem 2rem;
+
+  &_after {
+    &::after {
+      content: "";
+      display: block;
+      position: relative;
+      height: 0.5rem;
+      width: 0.5rem;
+      border-radius: 50%;
+      background-color: $color-notifcation;
+      top: -1.8rem;
+      margin-left: auto;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &_inbox {
+    color: $color-icons;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-black;
+    }
+  }
+}
+.convo {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: $font-size-frequent;
+  margin-bottom: 1rem;
+  &_text {
+    font-size: $font-size-frequent;
+    color: $color-icons-dark;
+  }
+  &_icons {
+    height: $font-size-large;
+    width: $font-size-large;
+    color: $color-black;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.left {
+  margin-left: auto;
+}
+
+.chat_section {
+  overflow-y: scroll;
+  height: 60vh;
+}
+.chat_section::-webkit-scrollbar {
+  display: none;
+}
+.msg {
+  &_active {
+    border-radius: 40px 0 0 40px;
+    background-color: $color-white;
+  }
+  &_details {
+    display: flex;
+    margin: 0 0 0 0.6rem;
+    padding: 1rem;
+    border-radius: 40px 0 0 40px;
+    transition: all linear 0.2s;
+
+    &--after {
+      &::after {
+        content: " ";
+        height: 0.7rem;
+        width: 0.9rem;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: 1rem;
+        bottom: -3rem;
+        background-color: $color-notifcation;
+      }
+      &-white {
+        &::after {
+          background-color: inherit;
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-white;
+    }
+    &-1 {
+      width: 100%;
+      margin-left: $font-size-frequent;
+    }
+    &1 {
+      display: flex;
+      margin: 0 0 0 0.6rem;
+      padding: 1rem;
+      border-radius: 40px 0 0 40px;
+      gap: $font-size-frequent;
+      transition: all linear 0.2s;
+    }
+  }
+}
+.header_five {
+  font-size: $font-size-frequent;
+  font-weight: 300;
+  padding: 1rem 0 1rem 2.4rem;
+}
+
+.user {
+  height: 4.2rem;
+  display: block;
+  width: 4.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+
+  &_details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-name {
+      font-size: $font-size-frequent;
+      font-weight: 700;
+      padding-top: 0.1rem;
+      text-wrap: nowrap;
+    }
+    &-pno {
+      font-size: $font-size-small;
+      padding-top: 0.7rem;
+      color: $color-icons-dark;
+      text-wrap: nowrap;
+      overflow: hidden;
+      width: 15rem;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.time {
+  margin-left: auto;
+  padding: 0.5rem 2.4rem 0 0;
+  text-transform: uppercase;
+  font-size: $font-size-small;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+.button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: $font-size-large;
+  position: relative;
+  margin-top: auto;
+}
+.new_convo {
+  width: 70%;
+  padding: $font-size-large 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: $font-size-small;
+  letter-spacing: 0.5px;
+  border-radius: 7px;
+  background-color: $color-black;
+  color: $color-white;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+.plus {
+  font-size: $font-size-large;
+}

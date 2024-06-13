@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Figtree", sans-serif;
+  overflow-y: hidden;
+  font-weight: 500;
+
+  @media screen and (min-width: 81.25em) {
+    font-size: 65%;
+  }
+
+  @media screen and (max-width: 77.5em) {
+    font-size: 62.5%;
+  }
+
+  @media screen and (max-width: 65.625em) {
+    font-size: 56%;
+  }
+  @media screen and (max-width: 59.375em) {
+    font-size: 52%;
+  }
+
+  @media screen and (max-width: 50em) {
+    font-size: 50%;
+  }
+  @media screen and (max-width: 43.75em) {
+    font-size: 46%;
+  }
+}
+.main {
+  display: grid;
+  grid-template-columns: 6rem 0.3fr 1fr;
+
+  @media screen and (max-width: 70em) {
+    grid-template-rows: 6rem 1fr;
+    grid-template-columns: 30% 1fr;
+    height: 100vh;
+  }
+  @media screen and (max-width: 59.375em) {
+    grid-template-columns: 0.4fr 1fr;
+  }
+}
+.icons {
+  padding: $font-size-small 0;
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: black;
+  color: $color-icons;
+
+  @media screen and (max-width: 70em) {
+    display: none;
+  }
+}
+.sidebar {
+  grid-column: 2/3;
+  background-color: rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  animation: side ease-in 1s;
+
+  @media screen and (max-width: 70em) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  @media screen and (max-width: 34.375em) {
+    display: none !important;
+  }
+}
+@keyframes side {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.home_page {
+  grid-column: 3/-1;
+  padding: 0 0 0 2.4rem;
+  height: 98vh;
+  display: grid;
+  grid-template-rows: 0.1fr 1fr;
+  z-index: 10;
+
+  @media screen and (max-width: 70em) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    height: 90vh;
+  }
+  @media screen and (max-width: 34.275em) {
+    grid-column: 1/-1 !important;
+    grid-row: 2/3 !important;
+  }
+}
+.sidebar1 {
+  background-color: rgba(0, 0, 0, 0.06);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  animation: animate ease-in 1s;
+}
+.none {
+  display: none;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
