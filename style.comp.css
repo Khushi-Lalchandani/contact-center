@@ -475,16 +475,17 @@
   grid-template-columns: repeat(4, 1fr);
   font-size: 1.4rem;
   font-weight: 400;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
   color: #aaa;
   width: 100%;
-  border-bottom: 1px solid #999; }
+  border-bottom: 1px solid #ccc; }
   .option_items {
     list-style-type: none;
     text-wrap: nowrap;
-    padding: 1rem 2rem 0 2rem;
+    padding: 1.6rem 2rem 0 2rem;
     margin-bottom: -1px;
-    text-align: center; }
+    text-align: center;
+    transition: all 0.5s; }
     .option_items:hover {
       cursor: pointer;
       color: #000;
@@ -496,18 +497,26 @@
     font-weight: 500;
     border-bottom: 1.4px solid #ccc;
     background-color: rgba(204, 204, 204, 0.2);
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.5s; }
     .option_items.active::after {
       content: "";
       position: relative;
       display: block;
       height: 0;
       width: 0;
-      left: 47%;
-      bottom: -1rem;
+      left: 45%;
+      bottom: -1.1rem;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-top: 10px solid #ccc; }
+      @media screen and (max-width: 950px) {
+        .option_items.active::after {
+          bottom: -1.2rem; } }
+      @media screen and (max-width: 650px) {
+        .option_items.active::after {
+          bottom: -1.4rem;
+          left: 40%; } }
 
 .division {
   height: 1px;

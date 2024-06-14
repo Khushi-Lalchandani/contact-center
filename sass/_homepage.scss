@@ -232,17 +232,18 @@
   grid-template-columns: repeat(4, 1fr);
   font-size: $font-size-frequent;
   font-weight: 400;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
   color: $color-icons;
   width: 100%;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid $color-gray-light;
 
   &_items {
     list-style-type: none;
     text-wrap: nowrap;
-    padding: 1rem 2rem 0 2rem;
+    padding: 1.6rem 2rem 0 2rem;
     margin-bottom: -1px;
     text-align: center;
+    transition: all 0.5s;
 
     &:hover {
       cursor: pointer;
@@ -257,8 +258,8 @@
     font-weight: 500;
     border-bottom: 1.4px solid $color-gray-light;
     background-color: rgba($color-gray-light, 0.2);
-
     cursor: pointer;
+    transition: all 0.5s;
 
     &::after {
       content: "";
@@ -266,11 +267,19 @@
       display: block;
       height: 0;
       width: 0;
-      left: 47%;
-      bottom: -1rem;
+      left: 45%;
+      bottom: -1.1rem;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-top: 10px solid $color-gray-light;
+
+      @media screen and (max-width: 950px) {
+        bottom: -1.2rem;
+      }
+      @media screen and (max-width: 650px) {
+        bottom: -1.4rem;
+        left: 40%;
+      }
     }
   }
 }
