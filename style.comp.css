@@ -491,12 +491,12 @@
       color: #000;
       background-color: rgba(204, 204, 204, 0.2);
       font-weight: 500;
-      border-bottom: 1.4px solid #ccc; }
+      border-bottom: 1px solid #999; }
   .option_items.active {
     color: #000;
     font-weight: 500;
-    border-bottom: 1.4px solid #ccc;
     background-color: rgba(204, 204, 204, 0.2);
+    border-bottom: 1px solid #999;
     cursor: pointer;
     transition: all 0.5s; }
     .option_items.active::after {
